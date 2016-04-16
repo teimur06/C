@@ -17,5 +17,7 @@ int main(int count, char ** arg) {
 
 	freeArrayString(arrayString,countString);
 
+	printf("XXX");
+	
 	return 0;
 }
