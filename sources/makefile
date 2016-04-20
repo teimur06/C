@@ -14,7 +14,8 @@ main.o: main.cpp libs
 libs: $(OBJECTS)
 	@echo create libs files
 	#ar rv ../lib/libcommon.a $(OBJECTS) 
-	$(CC) -shared $(WL)  -o $(HOME_LIBPATH)/libcommon.so $(OBJECTS) -lm
+	mkdir -p $(HOME_LIBPATH)
+	$(CC) -shared $(WL) -o $(HOME_LIBPATH)/libcommon.so $(OBJECTS) -lm
 	#$(CLEAN) $(HOME_LIBPATH)/libcommon.so
 	#$(CLEAN) $(HOME_LIBPATH)/libcommon.so.1
 	#ln -s $(HOME_LIBPATH)/libcommon.so.1.0 $(HOME_LIBPATH)/libcommon.so.1
