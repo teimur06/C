@@ -1,6 +1,8 @@
 # $@ - »м€ текущей цели
 # $^ - —писок зависимотей в текущей св€зке
 
+# Тестируем branch
+
 INCLUDE=-I ../include 
 LIBPATH=-L ../lib
 SOURCE_FILES=common.cpp
