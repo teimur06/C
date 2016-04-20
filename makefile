@@ -1,10 +1,6 @@
 # $@ - Имя текущей цели
 # $^ - Список зависимотей в текущей связке
 
-#commit 2
-
-#add vranch1
-
 #CC=mips-openwrt-linux-gcc
 CC=gcc
 CCFLAGS=-Wall -g -Wno-write-strings
