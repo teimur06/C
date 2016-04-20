@@ -3,6 +3,8 @@
 
 */
 
+int testVal;
+
 // Отчищает массив строк
 void freeArrayString(char**arrayString, int countString);
 
@@ -11,3 +13,6 @@ void freeArrayString(char**arrayString, int countString);
 // delimiter - разделитель
 // countString - возвращает колличество строк в массиве
 char** split(char * string, const char * delimiter, int * countString);
+
+
+void initTestVal(int val);
