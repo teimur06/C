@@ -2,8 +2,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <getopt.h>
+#include <mntent.h>
+#include<sys/statvfs.h>
+#include <iostream>
+#include <vector>
+#include <iterator>
+#include <map>
 #include "common.h"
+#include "graphic.h"
 
+
+using namespace std;
 
 void print_split(char * string, const char * delimiter) {
 	int countString;
@@ -16,20 +25,81 @@ void print_split(char * string, const char * delimiter) {
 	freeArrayString(arrayString,countString);
 }
 
+
+class A{
+public:
+    A(){
+      //  printf("A()\n");
+    }
+    /** Zad is method class A
+     */
+    void zad()
+    {
+        vector<int> v;
+        for(int i = 53; i < 120; i++)
+        {
+            v.push_back(i);
+        }
+        
+
+        for(std::vector<int>::iterator i = v.begin(); i < v.end(); i++)
+        {
+         //   std::cout << *i << std::endl;
+        }
+    }
+    
+};
+
+
+void paint_hui() {
+
+
+	 openfb();
+	 clearScreen();
+
+	 line(5,5,80,100);
+	 line(80,5,5,100);
+	 line(100,5,140,50);
+	 line(180,5,100,100);
+	 line(200,5,200,100);
+	 line(280,5,200,100);
+	 line(280,5,280,100);
+	 line(220,5,250,10);
+	 closefb();
+
+	
+}
+
+unsigned long long  ME(unsigned long long b, unsigned long long e, unsigned long long m) {
+	unsigned long c = 1;
+	for (unsigned long long  _e = 1; _e <= e; _e++) {
+		c = (c*b) % m; 
+	}
+	return c;
+}
+
 int main(int count, char ** arg) {
 
-	int opt;
+	unsigned long long  b,e,m;
+        int opt;
+	//char * pEnd;
 	bool param_exist;
 	const char * delimiter = " ";
 	char * help_str = 
 						"-h       - Print help and exit\n"
 						"-p       - print na hui\n"
-						"-o <val> - printe testVal\n";
+						"-o <val> - printe testVal\n"
+						"-M <b> <e> <m>  - \"b^e mod m\"\n"
+                                                "-s       - printe split\n";
 	char * string = "param1 param2 param3 param4 param5 param6 param7 param8 param9 param10 param11 param12 param13 param14 param15 param16";
 	
 	param_exist = false;
 	
-	while ((opt = getopt (count, arg, "hpo:")) != -1) {
+        A * a =new A;
+        a->zad();
+        delete a;
+        
+	while ((opt = getopt (count, arg, "shpo:M")) != -1) {
 		param_exist = true;
 		switch (opt) {
 			case 'h':
@@ -37,7 +107,25 @@ int main(int count, char ** arg) {
 				break;
 				
 			case 'p':
+				paint_hui();
+				break;
+
+                                
+			case 's':
 				print_split(string, delimiter);
+				break;
+                                
+			case 'M':
+				if ((count-optind) != 3  )
+				{
+					printf ("-M <b> <e> <m>  - \"b^e mod m\"\n");
+					break;
+				}	
+				b = strtoull (arg[optind],NULL,10);
+				e = strtoull (arg[optind+1],NULL,10);
+				m = strtoull (arg[optind+2],NULL,10);
+				printf("%llu^%llu mod %llu = %llu\n", b,e,m,ME(b,e,m));
+				//printf("%llu\n",ME(b,e,m));
 				break;
 				
 			case 'o':

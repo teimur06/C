@@ -3,6 +3,8 @@
 
 */
 
+
+
 int testVal;
 
 // Отчищает массив строк
@@ -16,3 +18,7 @@ char** split(char * string, const char * delimiter, int * countString);
 
 
 void initTestVal(int val);
+
+
+int min(int a, int b);
+int max(int a, int b);

@@ -1,8 +1,22 @@
+#include "common.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "common.h"
 
+
+
+
+int min(int a, int b)
+{
+	if (a == b) return a;
+	if (a < b) return a; else return b;
+}
+
+int max(int a, int b)
+{
+	if (a == b) return a;
+	if (a > b) return a; else return b;
+}
 
 // Отчищает массив строк
 void freeArrayString(char**arrayString, int countString)
@@ -11,6 +25,8 @@ void freeArrayString(char**arrayString, int countString)
 		free(arrayString[i]);
 	free(arrayString);
 }
+
+
 
 char ** addMallocArrayString(char ** arrayString, int * count_malloc) {
 	int _count_malloc, count;

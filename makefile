@@ -7,15 +7,15 @@
 # -Wno-write-strings удаляет предупреждения строк
 
 
-CC=mips-openwrt-linux-gcc
-#CC=gcc
-CCFLAGS=-Wall -Wno-write-strings
+#CC=mips-openwrt-linux-gcc
+CC=g++
+CCFLAGS=-Wall -Wno-write-strings -std=c++11
 CLEAN=rm -f
 PROGRAM_NAME=main
 SOURCE_FILES=main.cpp
 OBJECTS=sources/main.o
 SOURCES=sources
-LIB= -lcommon
+LIB= -lcommon -lgraphic
 WL=-Wl,-rpath,lib
 LIBPATH=-L lib
 export
