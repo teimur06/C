@@ -1,2 +1,4 @@
 *.[oa]
 main
+include/debian/
+nbproject/
