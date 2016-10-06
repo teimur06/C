@@ -30,7 +30,7 @@ class A{
 public:
     A(){
 	//temp
-        printf("DIFF!");
+        printf("branch cj 2");
     }
     /** Zad is method class A
      */
