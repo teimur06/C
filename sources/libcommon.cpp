@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
+// lib
 
 
 int min(int a, int b)
