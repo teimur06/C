@@ -30,6 +30,7 @@ class A{
 public:
     A(){
         printf("OOO NO!");
+	//temp
     }
     /** Zad is method class A
      */
