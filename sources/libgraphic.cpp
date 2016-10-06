@@ -102,8 +102,8 @@ void line(int x1, int y1, int x2, int y2) {
 							
 			if (vinfo.bits_per_pixel == 32) {
 					//RGBA
-					 *(fbp + location) = y;          // B
-					 *(fbp + location + 1) = x;      // G
+					 *(fbp + location) = 0;          // B
+					 *(fbp + location + 1) = 200;      // G
 					 *(fbp + location + 2) = 200;    // R
 					 *(fbp + location + 3) = 0;      // A
 			}

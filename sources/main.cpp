@@ -29,23 +29,14 @@ void print_split(char * string, const char * delimiter) {
 class A{
 public:
     A(){
-      //  printf("A()\n");
+        printf("A()\n");
     }
     /** Zad is method class A
      */
     void zad()
     {
-        vector<int> v;
-        for(int i = 53; i < 120; i++)
-        {
-            v.push_back(i);
-        }
-        
-
-        for(std::vector<int>::iterator i = v.begin(); i < v.end(); i++)
-        {
-         //   std::cout << *i << std::endl;
-        }
+        std::string html = " test sdlkmfsdklfsdkl sddsfds192.168.4.8dsertert";
+       
     }
     
 };
