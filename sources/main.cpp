@@ -29,7 +29,7 @@ void print_split(char * string, const char * delimiter) {
 class A{
 public:
     A(){
-        printf("OOO YES!");
+        printf("OOO NO!");
     }
     /** Zad is method class A
      */
