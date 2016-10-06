@@ -29,7 +29,7 @@ void print_split(char * string, const char * delimiter) {
 class A{
 public:
     A(){
-	   printf("branch cj");
+	   printf("branch cj 2");
     }
     /** Zad is method class A
      */
