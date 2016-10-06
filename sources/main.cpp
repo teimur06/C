@@ -31,6 +31,8 @@ public:
     A(){
 	//temp
         printf("branch cj 2");
+        printf("DIFF!");
+        printf("DIFF!");
     }
     /** Zad is method class A
      */
